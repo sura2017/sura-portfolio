@@ -18,7 +18,8 @@ export const About = () => {
                                 x: 0,
                                 transition: {
                                     staggerChildren: 0.2,
-                                    duration: 0.8
+                                    duration: 0.8,
+                                    ease: "easeOut" as any
                                 }
                             }
                         }}
@@ -67,7 +68,7 @@ export const About = () => {
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.8, ease: "easeOut" as any }}
                         className="w-full lg:w-[400px]"
                     >
                         <div className="relative group p-8 lg:p-10 bg-slate-900/50 backdrop-blur-2xl rounded-[3rem] border border-white/10 overflow-hidden">
@@ -109,7 +110,7 @@ export const About = () => {
                                             initial={{ width: 0 }}
                                             whileInView={{ width: "99.9%" }}
                                             viewport={{ once: true }}
-                                            transition={{ duration: 1.5, delay: 0.5 }}
+                                            transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" as any }}
                                             className="bg-gradient-to-r from-electric-blue to-emerald-green h-full"
                                         />
                                     </div>

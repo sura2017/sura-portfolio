@@ -8,7 +8,6 @@ import { Menu, X, Code2, ArrowRight } from "lucide-react";
 const navLinks = [
     { name: "HOME", href: "/#home" },
     { name: "ABOUT", href: "/#about" },
-    { name: "EXPERIENCE", href: "/experience" },
     { name: "PROJECTS", href: "/#projects" },
     { name: "CONTACT", href: "/#contact" },
 ];
@@ -112,7 +111,7 @@ export const Navbar = () => {
                         initial={{ clipPath: "circle(0% at 90% 10%)" }}
                         animate={{ clipPath: "circle(150% at 50% 50%)" }}
                         exit={{ clipPath: "circle(0% at 90% 10%)" }}
-                        transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
+                        transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] as any }}
                         className="fixed inset-0 z-[150] bg-obsidian flex flex-col items-center justify-center"
                     >
                         <div className="flex flex-col gap-8 text-center">

@@ -24,14 +24,14 @@ const TechVisual = () => {
                 <div className="relative z-10 scale-90 md:scale-125">
                     <motion.div
                         animate={{ rotateY: [0, 15, 0], rotateX: [0, -10, 0] }}
-                        transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+                        transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" as any }}
                         className="relative w-40 h-40 bg-slate-900 rounded-[2rem] border-2 border-emerald-green/30 flex items-center justify-center shadow-[0_0_80px_rgba(16,185,129,0.15)] group-hover:border-emerald-green/60 transition-all duration-700"
                     >
                         <Cpu size={80} className="text-emerald-green drop-shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover:scale-110 transition-transform duration-500" />
 
                         <motion.div
                             animate={{ y: [-15, 15, -15], x: [10, -10, 10] }}
-                            transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
+                            transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" as any }}
                             className="absolute -top-12 -right-8 p-3 bg-white/5 backdrop-blur-xl rounded-xl border border-white/10 shadow-2xl"
                         >
                             <Code2 size={32} className="text-electric-blue" />
@@ -39,7 +39,7 @@ const TechVisual = () => {
 
                         <motion.div
                             animate={{ y: [15, -15, 15], x: [-10, 10, -10] }}
-                            transition={{ repeat: Infinity, duration: 7, ease: "easeInOut" }}
+                            transition={{ repeat: Infinity, duration: 7, ease: "easeInOut" as any }}
                             className="absolute -bottom-8 -left-12 p-3 bg-white/5 backdrop-blur-xl rounded-xl border border-white/10 shadow-2xl"
                         >
                             <Layers size={32} className="text-emerald-green" />
@@ -50,7 +50,7 @@ const TechVisual = () => {
                         <motion.div
                             key={idx}
                             animate={{ rotate: 360 }}
-                            transition={{ repeat: Infinity, duration: 20 + idx * 5, ease: "linear" }}
+                            transition={{ repeat: Infinity, duration: 20 + idx * 5, ease: "linear" as any }}
                             className="absolute inset-0 pointer-events-none"
                         >
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[100px]">
@@ -86,7 +86,7 @@ export const Hero = () => {
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.8, ease: "easeOut" }
+            transition: { duration: 0.8, ease: "easeOut" as any }
         }
     };
 
@@ -164,12 +164,12 @@ export const Hero = () => {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
+                        transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" as any }}
                         className="flex-1 relative w-full max-w-[600px] flex justify-center lg:justify-end"
                     >
                         <motion.div
                             animate={{ y: [0, -20, 0] }}
-                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" as any }}
                             className="relative z-10"
                         >
                             <TechVisual />

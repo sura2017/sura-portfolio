@@ -106,7 +106,7 @@ const TiltCard = ({ card }: { card: typeof contactCards[0] }) => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: card.delay }}
+            transition={{ delay: card.delay, ease: "easeOut" as any }}
             className="relative group h-[280px] p-8 rounded-[3rem] bg-white/5 backdrop-blur-xl border border-white/10 flex flex-col justify-between transition-all duration-500 overflow-hidden"
         >
             <div

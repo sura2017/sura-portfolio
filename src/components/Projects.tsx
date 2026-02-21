@@ -61,7 +61,7 @@ export const Projects = () => {
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
-                            transition={{ duration: 1, ease: [0.2, 0.65, 0.3, 0.9] }}
+                            transition={{ duration: 1, ease: [0.2, 0.65, 0.3, 0.9] as any }}
                             className="group/card relative grid lg:grid-cols-2 gap-16 lg:gap-24 items-center"
                         >
                             {/* Project Visual */}
