@@ -86,7 +86,7 @@ export const Hero = () => {
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.8, ease: [0.2, 0.65, 0.3, 0.9] }
+            transition: { duration: 0.8, ease: "easeOut" }
         }
     };
 
@@ -164,7 +164,7 @@ export const Hero = () => {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 1.2, delay: 0.6, ease: [0.2, 0.65, 0.3, 0.9] as any }}
+                        transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
                         className="flex-1 relative w-full max-w-[600px] flex justify-center lg:justify-end"
                     >
                         <motion.div
