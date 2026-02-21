@@ -6,10 +6,11 @@ import { cn } from "@/lib/utils";
 import { Menu, X, Code2, ArrowRight } from "lucide-react";
 
 const navLinks = [
-    { name: "HOME", href: "#home" },
-    { name: "ABOUT", href: "#about" },
-    { name: "PROJECTS", href: "#projects" },
-    { name: "CONTACT", href: "#contact" },
+    { name: "HOME", href: "/#home" },
+    { name: "ABOUT", href: "/#about" },
+    { name: "EXPERIENCE", href: "/experience" },
+    { name: "PROJECTS", href: "/#projects" },
+    { name: "CONTACT", href: "/#contact" },
 ];
 
 export const Navbar = () => {
@@ -24,10 +25,16 @@ export const Navbar = () => {
     }, []);
 
     const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-        e.preventDefault();
-        const element = document.querySelector(href);
-        if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
+        if (href.startsWith("#") || (href.startsWith("/#") && window.location.pathname === "/")) {
+            e.preventDefault();
+            const id = href.includes("#") ? href.split("#")[1] : "";
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+                setIsOpen(false);
+            }
+        } else if (href.startsWith("/")) {
+            // Let the standard link handling take over for route changes
             setIsOpen(false);
         }
     };
