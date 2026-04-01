@@ -44,9 +44,9 @@ export const About = () => {
                         </motion.h2>
 
                         <div className="space-y-6 text-lg md:text-xl text-slate-400 leading-relaxed font-medium">
-                            <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="space-y-6">
+                            <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="space-y-6 text-slate-400">
                                 <p>
-                                    I am Sura Abrham, an ASTU Software Engineering student who has mastered Full-Stack development and is now pioneering Agent AI systems. I specialize in building autonomous, intelligent web applications that solve real-world problems through data-driven engineering.
+                                    I am Sura Abrham, a Software Engineering student at ASTU. I have successfully mastered Full-Stack Development and am now pioneering the use of Agent AI to build autonomous, intelligent systems. I develop scalable, efficient, and user-centered applications using the modern stack (Next.js, Node.js, MongoDB, Tailwind CSS). My unique edge is combining full-stack engineering with AI-driven automation to solve complex real-world problems.
                                 </p>
                             </motion.div>
                         </div>

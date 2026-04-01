@@ -52,13 +52,13 @@ export const Hero = () => {
     return (
         <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-obsidian">
             <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
-                <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Column 1: Content */}
                     <motion.div
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
-                        className="flex-1 text-center lg:text-left z-20"
+                        className="text-center lg:text-left z-20"
                     >
                         <motion.span
                             variants={wordVariants}
@@ -67,7 +67,7 @@ export const Hero = () => {
                             PORTFOLIO
                         </motion.span>
 
-                        <h1 className="text-[clamp(1.8rem,5vw,4rem)] font-black font-plus-jakarta leading-[1.0] tracking-tighter mb-8 max-w-4xl mx-auto lg:mx-0">
+                        <h1 className="text-[clamp(2rem,4vw,3.5rem)] font-black font-plus-jakarta leading-[1.1] tracking-tighter mb-6 max-w-full mx-auto lg:mx-0">
                             <span className="bg-gradient-to-br from-electric-blue via-blue-400 to-emerald-green bg-clip-text text-transparent drop-shadow-2xl">
                                 {words.map((word, i) => (
                                     <motion.span key={i} variants={wordVariants} className="inline-block mr-[0.2em]">
@@ -79,17 +79,10 @@ export const Hero = () => {
 
                         <motion.h2
                             variants={wordVariants}
-                            className="text-xl md:text-3xl text-slate-200 mb-6 font-bold tracking-tight max-w-2xl mx-auto lg:mx-0"
+                            className="text-lg md:text-2xl text-slate-300 mb-10 font-medium tracking-tight max-w-xl mx-auto lg:mx-0 leading-relaxed"
                         >
-                            Completed Full-Stack Mastery & ASTU Software Engineering Student.
+                            Expert Full-Stack Developer specialized in building autonomous AI workflows and scalable web ecosystems.
                         </motion.h2>
-
-                        <motion.p
-                            variants={wordVariants}
-                            className="text-lg md:text-xl text-slate-500 mb-12 max-w-xl leading-relaxed font-medium mx-auto lg:mx-0"
-                        >
-                            Expertise in building autonomous workflows and prompt engineering, blending full-stack foundations with Agent AI innovation.
-                        </motion.p>
 
                         <motion.div
                             variants={wordVariants}
@@ -124,7 +117,7 @@ export const Hero = () => {
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" as any }}
-                        className="flex-1 relative w-full max-w-[600px] flex justify-center lg:justify-end"
+                        className="relative w-full flex justify-center lg:justify-end"
                     >
                         <motion.div
                             animate={{ y: [0, -20, 0] }}

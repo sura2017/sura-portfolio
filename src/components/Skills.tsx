@@ -159,11 +159,15 @@ export const Skills = () => {
                         className="md:col-span-2 lg:col-span-4 group relative p-8 rounded-[3rem] bg-gradient-to-br from-electric-blue/10 to-emerald-green/10 border border-white/10 flex items-center justify-between overflow-hidden"
                     >
                         <div className="relative z-10 flex-1">
-                            <h3 className="text-2xl font-black text-white mb-2">Agent AI & Automation</h3>
-                            <p className="text-slate-400 text-sm max-w-md font-medium">Expertise in building autonomous workflows, intelligent agentic systems, and mastering prompt engineering to solve real-world problems.</p>
+                            <h3 className="text-2xl font-black text-white mb-4">Agent AI & Automation</h3>
+                            <div className="flex flex-wrap gap-2">
+                                {["Autonomous AI Workflows", "Prompt Engineering", "Agentic System Design", "Antigravity AI Integration"].map(tool => (
+                                    <span key={tool} className="text-[10px] md:text-xs font-black px-3 py-1.5 rounded-lg bg-electric-blue/10 border border-electric-blue/20 text-electric-blue shadow-[0_0_15px_rgba(59,130,246,0.2)] uppercase tracking-widest">{tool}</span>
+                                ))}
+                            </div>
                         </div>
-                        <div className="relative z-10 p-6 bg-white/10 rounded-full backdrop-blur-3xl border border-white/10 group-hover:rotate-12 transition-transform">
-                            <Rocket size={48} className="text-electric-blue" />
+                        <div className="relative z-10 ml-4 p-6 bg-white/10 rounded-full backdrop-blur-3xl border border-white/10 group-hover:rotate-12 transition-transform">
+                            <Rocket size={48} className="text-electric-blue drop-shadow-[0_0_15px_rgba(59,130,246,0.6)]" />
                         </div>
                     </motion.div>
                 </motion.div>
