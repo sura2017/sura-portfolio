@@ -44,20 +44,9 @@ export const About = () => {
                         </motion.h2>
 
                         <div className="space-y-6 text-lg md:text-xl text-slate-400 leading-relaxed font-medium">
-                            <motion.p variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
-                                I am Sura Abrham, a Software Engineering student at Adama Science and Technology University (ASTU) with a strong foundation in full-stack web development.
-                            </motion.p>
-
-                            <motion.p variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
-                                I develop scalable, efficient, and user-centered web applications using modern technologies including JavaScript, TypeScript, React.js, Node.js, Express.js, MongoDB, MySQL, HTML5, CSS3, and Tailwind CSS.
-                            </motion.p>
-
-                            <motion.div
-                                variants={{ hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1 } }}
-                                className="p-6 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 border-l-4 border-l-emerald-green"
-                            >
-                                <p className="italic text-slate-300">
-                                    "I have experience building dynamic systems such as e-commerce platforms and my goal is to become a Full-Stack Data Scientist."
+                            <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="space-y-6">
+                                <p>
+                                    I am Sura Abrham, an ASTU Software Engineering student who has mastered Full-Stack development and is now pioneering Agent AI systems. I specialize in building autonomous, intelligent web applications that solve real-world problems through data-driven engineering.
                                 </p>
                             </motion.div>
                         </div>

@@ -152,18 +152,18 @@ export const Skills = () => {
                         </div>
                     </motion.div>
 
-                    {/* Bento Card 4: Strategy */}
+                    {/* Bento Card 4: Agent AI & Automation */}
                     <motion.div
                         variants={itemVariants}
                         whileHover={{ y: -8 }}
                         className="md:col-span-2 lg:col-span-4 group relative p-8 rounded-[3rem] bg-gradient-to-br from-electric-blue/10 to-emerald-green/10 border border-white/10 flex items-center justify-between overflow-hidden"
                     >
                         <div className="relative z-10 flex-1">
-                            <h3 className="text-2xl font-black text-white mb-2">Architectural Philosophy</h3>
-                            <p className="text-slate-400 text-sm max-w-md font-medium">Prioritizing modularity, type-safety, and performance-first engineering in every codebase I craft.</p>
+                            <h3 className="text-2xl font-black text-white mb-2">Agent AI & Automation</h3>
+                            <p className="text-slate-400 text-sm max-w-md font-medium">Expertise in building autonomous workflows, intelligent agentic systems, and mastering prompt engineering to solve real-world problems.</p>
                         </div>
                         <div className="relative z-10 p-6 bg-white/10 rounded-full backdrop-blur-3xl border border-white/10 group-hover:rotate-12 transition-transform">
-                            <Cpu size={48} className="text-white" />
+                            <Rocket size={48} className="text-electric-blue" />
                         </div>
                     </motion.div>
                 </motion.div>

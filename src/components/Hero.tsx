@@ -7,59 +7,18 @@ import { ArrowRight, Cpu, Layers, Disc, Terminal, Code2, Monitor, Globe } from "
 // Tech Visual Component with internal floating/rotate animations
 const TechVisual = () => {
     return (
-        <div className="relative group">
-            <div className="absolute -inset-10 bg-gradient-to-tr from-electric-blue/20 to-emerald-green/20 rounded-full blur-[100px] opacity-50 animate-pulse" />
+        <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] flex items-center justify-center shrink-0">
+            {/* Background Glow */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-electric-blue/40 to-emerald-green/40 rounded-full blur-[60px] opacity-70 animate-pulse" />
 
-            <div className="relative w-72 h-72 md:w-[480px] md:h-[480px] rounded-[3rem] bg-white/5 backdrop-blur-xl border border-white/10 flex items-center justify-center p-8 overflow-hidden shadow-2xl">
-                {/* Binary Mesh Pattern Layer */}
-                <div className="absolute inset-0 opacity-[0.05] font-mono text-[10px] text-emerald-green leading-none select-none pointer-events-none p-4 overflow-hidden">
-                    {Array.from({ length: 25 }).map((_, i) => (
-                        <div key={i} className="whitespace-nowrap animate-marquee mb-1" style={{ animationDuration: `${20 + i}s`, opacity: 0.5 }}>
-                            1011001010111010101010111010101101010101011010101010
-                        </div>
-                    ))}
-                </div>
-
-                {/* Isometric Tech Composition */}
-                <div className="relative z-10 scale-90 md:scale-125">
-                    <motion.div
-                        animate={{ rotateY: [0, 15, 0], rotateX: [0, -10, 0] }}
-                        transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" as any }}
-                        className="relative w-40 h-40 bg-slate-900 rounded-[2rem] border-2 border-emerald-green/30 flex items-center justify-center shadow-[0_0_80px_rgba(16,185,129,0.15)] group-hover:border-emerald-green/60 transition-all duration-700"
-                    >
-                        <Cpu size={80} className="text-emerald-green drop-shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover:scale-110 transition-transform duration-500" />
-
-                        <motion.div
-                            animate={{ y: [-15, 15, -15], x: [10, -10, 10] }}
-                            transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" as any }}
-                            className="absolute -top-12 -right-8 p-3 bg-white/5 backdrop-blur-xl rounded-xl border border-white/10 shadow-2xl"
-                        >
-                            <Code2 size={32} className="text-electric-blue" />
-                        </motion.div>
-
-                        <motion.div
-                            animate={{ y: [15, -15, 15], x: [-10, 10, -10] }}
-                            transition={{ repeat: Infinity, duration: 7, ease: "easeInOut" as any }}
-                            className="absolute -bottom-8 -left-12 p-3 bg-white/5 backdrop-blur-xl rounded-xl border border-white/10 shadow-2xl"
-                        >
-                            <Layers size={32} className="text-emerald-green" />
-                        </motion.div>
-                    </motion.div>
-
-                    {[Monitor, Globe, Disc, Terminal].map((Icon, idx) => (
-                        <motion.div
-                            key={idx}
-                            animate={{ rotate: 360 }}
-                            transition={{ repeat: Infinity, duration: 20 + idx * 5, ease: "linear" as any }}
-                            className="absolute inset-0 pointer-events-none"
-                        >
-                            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[100px]">
-                                <div className="p-2 bg-white/5 backdrop-blur-md rounded-lg border border-white/10 shadow-xl opacity-20 group-hover:opacity-60 transition-opacity">
-                                    <Icon size={16} className="text-white" />
-                                </div>
-                            </div>
-                        </motion.div>
-                    ))}
+            {/* Profile Image Container */}
+            <div className="relative w-full h-full rounded-full p-[3px] bg-gradient-to-br from-electric-blue via-emerald-green to-electric-blue shadow-[0_0_50px_rgba(59,130,246,0.3)] hover:shadow-[0_0_80px_rgba(16,185,129,0.5)] transition-shadow duration-700 overflow-hidden shrink-0 z-10">
+                <div className="relative w-full h-full rounded-full overflow-hidden bg-obsidian">
+                    <img 
+                        src="/sura-pro.jpg" 
+                        alt="Sura Abrham - Agent AI Architect"
+                        className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+                    />
                 </div>
             </div>
         </div>
@@ -67,7 +26,7 @@ const TechVisual = () => {
 };
 
 export const Hero = () => {
-    const title = "SOFTWARE ENGINEER";
+    const title = "SURA ABRHAM: SOFTWARE ENGINEER & AI AGENT ARCHITECT";
     const words = title.split(" ");
 
     const containerVariants = {
@@ -103,12 +62,12 @@ export const Hero = () => {
                     >
                         <motion.span
                             variants={wordVariants}
-                            className="block text-white/20 text-xs md:text-sm tracking-[0.4em] mb-6 font-black uppercase"
+                            className="block text-electric-blue text-xs md:text-sm tracking-[0.4em] mb-6 font-black uppercase"
                         >
-                            SURA ABRHAM
+                            PORTFOLIO
                         </motion.span>
 
-                        <h1 className="text-[clamp(2.5rem,8vw,5.5rem)] font-black font-plus-jakarta leading-[0.9] tracking-tighter mb-8 max-w-4xl mx-auto lg:mx-0">
+                        <h1 className="text-[clamp(1.8rem,5vw,4rem)] font-black font-plus-jakarta leading-[1.0] tracking-tighter mb-8 max-w-4xl mx-auto lg:mx-0">
                             <span className="bg-gradient-to-br from-electric-blue via-blue-400 to-emerald-green bg-clip-text text-transparent drop-shadow-2xl">
                                 {words.map((word, i) => (
                                     <motion.span key={i} variants={wordVariants} className="inline-block mr-[0.2em]">
@@ -120,16 +79,16 @@ export const Hero = () => {
 
                         <motion.h2
                             variants={wordVariants}
-                            className="text-xl md:text-3xl text-slate-200 mb-10 font-bold tracking-tight"
+                            className="text-xl md:text-3xl text-slate-200 mb-6 font-bold tracking-tight max-w-2xl mx-auto lg:mx-0"
                         >
-                            Full-Stack Developer.
+                            Completed Full-Stack Mastery & ASTU Software Engineering Student.
                         </motion.h2>
 
                         <motion.p
                             variants={wordVariants}
                             className="text-lg md:text-xl text-slate-500 mb-12 max-w-xl leading-relaxed font-medium mx-auto lg:mx-0"
                         >
-                            Building scalable, efficient, and user-centered web applications with modern full-stack technologies.
+                            Expertise in building autonomous workflows and prompt engineering, blending full-stack foundations with Agent AI innovation.
                         </motion.p>
 
                         <motion.div
